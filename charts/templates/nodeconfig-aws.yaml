@@ -177,7 +177,7 @@ requestSpotInstance: {{ $nodepool.requestSpotInstance }}
 retries: {{ $nodepool.retries }}
 {{- end }}
 {{- if $nodepool.rootSize }}
-rootSize: {{ $nodepool.rootSize }}
+rootSize: "{{ $nodepool.rootSize }}"
 {{- end }}
 {{- if $nodepool.createSecurityGroup }}
 securityGroup:
