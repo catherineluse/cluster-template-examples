@@ -63,7 +63,7 @@ requestSpotInstance: {{ $nodepool.requestSpotInstance }}
 retries: {{ $nodepool.retries }}
 {{- end }}
 {{- if $nodepool.rootSize }}
-rootSize: \"{{ $nodepool.rootSize }}\"
+rootSize: {{ printf "%s\"%s" $nodepool.rootSize printf "%s\"%s" }}
 {{- end }}
 securityGroup:
 {{- if $nodepool.createSecurityGroup }}
@@ -177,7 +177,7 @@ requestSpotInstance: {{ $nodepool.requestSpotInstance }}
 retries: {{ $nodepool.retries }}
 {{- end }}
 {{- if $nodepool.rootSize }}
-rootSize: \"{{ $nodepool.rootSize }}\"
+rootSize: {{ printf "%s\"%s" $nodepool.rootSize printf "%s\"%s" }}
 {{- end }}
 {{- if $nodepool.createSecurityGroup }}
 securityGroup:
